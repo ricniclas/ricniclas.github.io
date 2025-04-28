@@ -9,7 +9,7 @@
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <!-- <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon"> -->
 
   <!--
     - custom css link
@@ -25,7 +25,6 @@
 </head>
 
 <body>
-
   <!--
     - #MAIN
   -->
@@ -45,13 +44,21 @@
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Ricardo Niclas">Ricardo Niclas</h1>
 
-          <p class="title">Game Developer</p>
+          <div>
+            <select class="language-selector" id="language-select">
+                <option class="language-selector-option" value="en" id="enLanguage">English</option>
+                <option class="language-selector-option" value="pt" id="ptLanguage">Portuguese</option>
+            </select>
+          </div>
+
+          <h1 class="name" title="Ricardo Niclas" id="myName">Ricardo Niclas</h1>
+
+          <p class="title" id="jobTitle">Game Developer</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+          <span id="showContacts">Show Contacts</span>
 
           <ion-icon name="chevron-down"></ion-icon>
         </button>
@@ -85,7 +92,7 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Phone</p>
+              <p class="contact-title" id="phoneTitle">Phone</p>
 
               <a class="contact-link">+55 (11) 97376-8084</a>
             </div>
@@ -99,9 +106,9 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Birthday</p>
+              <p class="contact-title" id="birthdayTitle">Birthday</p>
 
-              <time datetime="1982-06-23">March 11, 1998</time>
+              <time datetime="1982-06-23" id="birthdayValue">March 11, 1998</time>
             </div>
 
           </li>
@@ -113,9 +120,9 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Location</p>
+              <p class="contact-title" id="locationTitle">Location</p>
 
-              <address>São Paulo, SP, BRA</address>
+              <address>Brás, São Paulo, BR</address>
             </div>
 
           </li>
@@ -200,22 +207,22 @@
       <article class="about  active" data-page="about">
 
         <header>
-          <h2 class="h2 article-title">About me</h2>
+          <h2 class="h2 article-title" id="aboutMe">About me</h2>
         </header>
 
         <section class="about-text">
-          <p>
+          <p id="aboutGratuated">
             Having graduated in Digital Game Development from college, I continued my career as an Android developer in the field of Information Security. Currently, I work as a Unity developer, creating medical simulations.
           </p>
 
-          <p>
+          <p id="asAGameDeveloper">
             As a game developer, I follow the best software development practices to
             maintain projects organized and expansive, as well as the implementation
             of external tools to supply the application functionalities such as servers
             (NodeJS), database (MySQL), and audio interface (FMOD).
           </p>
 
-          <p>
+          <p id="iAlsoHave">
             I also have experience as a technical artist, creating shaders using Shader
             Graph and HLSL, special effects using VFX Graph, Post Processing,
             Renderer Features, as well as creating supplementary meshes for VFX
@@ -230,7 +237,7 @@
 
         <section class="service">
 
-          <h3 class="h3 service-title">My Skills</h3>
+          <h3 class="h3 service-title" id="mySkills">My Skills</h3>
 
           <ul class="service-list">
 
@@ -242,9 +249,9 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Game Development</h4>
+                <h4 class="h4 service-item-title" id="gameDevelopment">Game Development</h4>
 
-                <p class="service-item-text">
+                <p class="service-item-text" id="6yearsOf">
                     6 years of experience developing games with Unity, including mobile, web, desktop, AR and medical simulations. Developing mechanics, APIs, input systems, data management with Scriptable Objects and SQLite, FMOD and online functionalities with Photon Pun
                 </p>
               </div>
@@ -258,9 +265,9 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Tech Art</h4>
+                <h4 class="h4 service-item-title" id="techArt">Tech Art</h4>
 
-                <p class="service-item-text">
+                <p class="service-item-text" id="shaderDevelopment">
                   Shader development for Unity and Unreal using both HLSL and Shader Graph, VFX and particle development, lighting and post processing. while also having skills with 3D and 2D softwares such as Maya, Photoshop, Premiere and After Effects
                 </p>
               </div>
@@ -274,9 +281,9 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Android Development</h4>
+                <h4 class="h4 service-item-title" id="androidDevelopment">Android Development</h4>
 
-                <p class="service-item-text">
+                <p class="service-item-text" id="3yearsOf">
                   3 years of experience developing Android libraries focusing on infomation security, as well as app obfuscation, distribution automation and feature flags
                 </p>
               </div>
@@ -290,9 +297,9 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Backend Development</h4>
+                <h4 class="h4 service-item-title" id="backendDevelopment">Backend Development</h4>
 
-                <p class="service-item-text">
+                <p class="service-item-text" id="backendDevelopmentWith">
                   Backend development with NodeJS and Golang utilizing end to end encryption, as well as databases development with MySQL
                 </p>
               </div>
@@ -310,7 +317,7 @@
 
         <section class="testimonials">
 
-          <h3 class="h3 testimonials-title">Testimonials</h3>
+          <h3 class="h3 testimonials-title" id="testimonials">Testimonials</h3>
 
           <ul class="testimonials-list has-scrollbar">
 
@@ -324,12 +331,12 @@
                 <h4 class="h4 testimonials-item-title" data-testimonials-title>Bruno Cruz</h4>
 
                 <div class="testimonials-text" data-testimonials-text>
-                  <p>
+                  <p id="brunoTest1">
                     I had the pleasure of working with Ricardo on multiple projects, especially in the information security area for Android. From the beginning, he has shown to be a talented and dedicated professional, whose technical knowledge and complex problem-solving skills were noticeable.
                   </p><br>
-                  <p>
+                  <p id="brunoTest2">
                     His innovative contributions implementing solutions about security were fundamental to the success of our projects, and besides his technical skills, Ricardo has an immense disposition to help his teammates and a strong sense of companionship.                   </p><br>
-                  <p>
+                  <p id="brunoTest3">
                     He was always available to help the team, share his knowledge, and offer valuable guidance. His capacity to work with his team and motivate his colleagues contributed significantly to a collaborative and productive work environment.
                   </p>
 
@@ -348,10 +355,10 @@
                 <h4 class="h4 testimonials-item-title" data-testimonials-title>João Luisi</h4>
 
                 <div class="testimonials-text" data-testimonials-text>
-                  <p>
+                  <p id="joaoTest1">
                     It is a pleasure to recommend Ricardo. His contribution to the team was fundamental, from the conception to the delivery of robust security solutions for the largest banks and fintechs in Brazil.                  </p>
                   <br>
-                  <p>
+                  <p id="joaoTest2">
                     His curiosity and openness to new opportunities set him apart, leading him to masterfully take on the role of tech lead, delivering one of Unico’s most important projects. Over the years, our collaboration has been incredible. I sincerely appreciate him being an essential part of the team. Keep striving for success, Ric!
                   </p>
                 </div>
@@ -379,7 +386,7 @@
 
             <div class="modal-img-wrapper">
               <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Bruno Cruz" width="80" data-modal-img>
+                <img src="./assets/images/FotoBruno.png" alt="Bruno Cruz" width="80" data-modal-img>
               </figure>
 
               <img src="./assets/images/icon-quote.svg" alt="quote icon">
@@ -421,7 +428,7 @@
       <article class="resume" data-page="resume">
 
         <header>
-          <h2 class="h2 article-title">Resume</h2>
+          <h2 class="h2 article-title" id="resumeTitle">Resume</h2>
         </header>
 
 
@@ -432,18 +439,18 @@
                 <ion-icon name="book-outline"></ion-icon>
               </div>
   
-              <h3 class="h3">Experience</h3>
+              <h3 class="h3" id="reExperience">Experience</h3>
             </div>
   
             <ol class="timeline-list">
   
               <li class="timeline-item">
   
-                <h4 class="h4 timeline-item-title">Simthera, Jardim Europa-SP — Unity Developer</h4>
+                <h4 class="h4 timeline-item-title" id="reSimtheraTitle">Simthera, Jardim Europa-SP — Unity Developer</h4>
   
-                <span>05/2024 - Currently</span>
+                <span id="reSimtheraTime">05/2024 - Currently</span>
   
-                <p class="timeline-text">
+                <p class="timeline-text" id="reSimtheraDesc">
                     I work as a Unity developer, responsible for the development and
                     maintenance of medical training softwares, as well as the external tools
                     necessary for the functionality of those applications.<br><br>
@@ -459,11 +466,11 @@
   
               <li class="timeline-item">
   
-                <h4 class="h4 timeline-item-title">Unico, Tatuapé-SP — Associate Developer - IC3</h4>
+                <h4 class="h4 timeline-item-title" id="reUnicoTitle">Unico, Tatuapé-SP — Associate Developer - IC3</h4>
   
-                <span>09/2022 - 01/2024</span>
+                <span id="reUnicoTime">09/2022 - 01/2024</span>
   
-                <p class="timeline-text">
+                <p class="timeline-text" id="reUnicoDesc">
                     After the acquisition of Makrosystems by Unico, I continued to focus on
                     Android development, but participated as a Tech Lead in an important
                     internal project. which introduced me to extra responsibilities other than
@@ -479,11 +486,11 @@
   
               <li class="timeline-item">
   
-                <h4 class="h4 timeline-item-title">Makrosystems, Tatuapé-SP — Junior Programmer</h4>
+                <h4 class="h4 timeline-item-title" id="reMakroTitle">Makrosystems, Tatuapé-SP — Junior Programmer</h4>
   
-                <span>01/2021 - 09/2022</span>
+                <span id="reMakroTime">01/2021 - 09/2022</span>
   
-                <p class="timeline-text">
+                <p id="reMakroDesc" class="timeline-text">
                     I worked as an Android developer, focusing on the Java language for the
                     development of libraries aimed at information security, I developed tools
                     such as:<br><br>
@@ -499,11 +506,11 @@
 
               <li class="timeline-item">
   
-                <h4 class="h4 timeline-item-title">Icarus Innovation Laboratory, Carapicuíba-SP — Monitor</h4>
+                <h4 class="h4 timeline-item-title" id="reIcarusTitle">Icarus Innovation Laboratory, Carapicuíba-SP — Monitor</h4>
   
-                <span>06/2019 - 12/2020</span>
+                <span id="reIcarusTime">06/2019 - 12/2020</span>
   
-                <p class="timeline-text">
+                <p id="reIcarusDesc" class="timeline-text">
                     I worked as a monitor, helping students develop their semester projects,
                     where they developed games for numerous platforms.<br>
                     I also worked as a supervisor and developer of projects focused on emerging
@@ -524,18 +531,18 @@
               <ion-icon name="book-outline"></ion-icon>
             </div>
 
-            <h3 class="h3">Education</h3>
+            <h3 class="h3" id="reEdu">Education</h3>
           </div>
 
           <ol class="timeline-list">
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Fatec - Digital Games Development — Technologist</h4>
+              <h4 class="h4 timeline-item-title" id="reFatecTitle">Fatec - Digital Games Development — Technologist</h4>
 
-              <span>07/2018 — 12/2021</span>
+              <span id="reFatecTime">07/2018 — 12/2021</span>
 
-              <p class="timeline-text">
+              <p id="reFatecDesc" class="timeline-text">
                 College was my starting point as a developer, where I developed
                 programming skills in several languages such as Python, Java, and mainly
                 C# with a focus on Unity development. It was also where I started my first
@@ -546,11 +553,11 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">SAGA - School of art and games — Technical Course</h4>
+              <h4 class="h4 timeline-item-title" id="reSagaTitle">SAGA - School of art and games — Technical Course</h4>
 
-              <span>07/2018 - 06/2020</span>
+              <span id="reSagaTime">07/2018 - 06/2020</span>
 
-              <p class="timeline-text">
+              <p id="reSagaDesc" class="timeline-text">
                 In the course, I learned about image and video editing processes, using
                 platforms such as Photoshop, Premiere, After Effects, as well as 3D
                 software such as Maya and Substance Painter.
@@ -565,14 +572,14 @@
 
         <section class="skill">
 
-          <h3 class="h3 skills-title">My skills</h3>
+          <h3 class="h3 skills-title" id="reMySkills">My skills</h3>
 
           <ul class="skills-list content-card">
 
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">C# for Unity(6 years)</h5>
+                <h5 class="h5" id="reSkillUnity">C# for Unity(6 years)</h5>
                 <data value="80">80%</data>
               </div>
 
@@ -585,7 +592,7 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">Java for Android (3 Years)</h5>
+                <h5 class="h5" id="reSkillJava">Java for Android (3 Years)</h5>
                 <data value="70">70%</data>
               </div>
 
@@ -598,7 +605,7 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">Tech Art (Unity and Unreal)</h5>
+                <h5 class="h5" id="reSkillTech">Tech Art (Unity and Unreal)</h5>
                 <data value="90">80%</data>
               </div>
 
@@ -611,7 +618,7 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">Image Editing (Photoshop, Illustrator)</h5>
+                <h5 class="h5" id="reSkillImage">Image Editing (Photoshop, Illustrator)</h5>
                 <data value="50">60%</data>
               </div>
 
@@ -625,7 +632,7 @@
             <li class="skills-item">
 
                 <div class="title-wrapper">
-                  <h5 class="h5">Backend (NodeJS, GoLang)</h5>
+                  <h5 class="h5" id="reSkillBackend">Backend (NodeJS, GoLang)</h5>
                   <data value="50">60%</data>
                 </div>
   
@@ -638,7 +645,7 @@
               <li class="skills-item">
 
                 <div class="title-wrapper">
-                  <h5 class="h5">Github (Gitflow, Pipelines)</h5>
+                  <h5 class="h5" id="reSkillGit">Github (Gitflow, Pipelines)</h5>
                   <data value="50">70%</data>
                 </div>
   
@@ -681,7 +688,7 @@
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Medical Simulations</button>
+              <button data-filter-btn>Simulations</button>
             </li>
 
           </ul>
@@ -712,17 +719,13 @@
                 <button data-select-item>Medical Simulations</button>
               </li>
 
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
             </ul>
 
           </div>
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="medical simulations">
+            <li class="project-item  active" data-filter-item data-category="simulations">
               <a href="https://baio.one/training/">
 
                 <figure class="project-img">
@@ -735,12 +738,12 @@
 
                 <h3 class="project-title">SimMics</h3>
 
-                <p class="project-category">Lead Programmer - Backend</p>
+                <p class="project-category" id="poSimMicsPos">Lead Programmer - Backend</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="medical simulations">
+            <li class="project-item  active" data-filter-item data-category="simulations">
               <a href="https://www.simthera.com/simraq">
 
                 <figure class="project-img">
@@ -753,7 +756,7 @@
 
                 <h3 class="project-title">SimRaq</h3>
 
-                <p class="project-category">Lead Programmer - Backend</p>
+                <p class="project-category" id="poSimRaqPos">Lead Programmer - Backend</p>
 
               </a>
             </li>
@@ -771,7 +774,7 @@
 
                 <h3 class="project-title">Stand & Fight</h3>
 
-                <p class="project-category">Lead Programmer - Tech Artist</p>
+                <p class="project-category" id="poStandPos">Lead Programmer - Tech Artist</p>
 
               </a>
             </li>
@@ -789,7 +792,7 @@
 
                 <h3 class="project-title">looops</h3>
 
-                <p class="project-category">Lead Programmer - Tech Artist - Sound Designer</p>
+                <p class="project-category" id="poLooopsPos">Lead Programmer - Tech Artist - Sound Designer</p>
 
               </a>
             </li>
@@ -807,7 +810,7 @@
 
                 <h3 class="project-title">Heirs At Work</h3>
 
-                <p class="project-category">Lead Programmer - Tech Artist</p>
+                <p class="project-category" id="poHeirsPos">Lead Programmer - Tech Artist</p>
 
               </a>
             </li>
@@ -825,7 +828,7 @@
 
                 <h3 class="project-title">Sdamot</h3>
 
-                <p class="project-category">Lead Art - Tech Art - UI</p>
+                <p class="project-category" id="poSdamotPos">Lead Art - Tech Art - UI</p>
 
               </a>
             </li>
@@ -843,7 +846,7 @@
 
                 <h3 class="project-title">Doors</h3>
 
-                <p class="project-category">UI - Programmer</p>
+                <p class="project-category" id="poDoorsPos">UI - Programmer</p>
 
               </a>
             </li>
@@ -861,7 +864,7 @@
 
                 <h3 class="project-title">Data Snatcher</h3>
 
-                <p class="project-category">Tech Artist - Animator - Composer</p>
+                <p class="project-category" id="poDataPos">Tech Artist - Animator - Composer</p>
 
               </a>
             </li>
@@ -879,7 +882,7 @@
 
                 <h3 class="project-title">Escalada</h3>
 
-                <p class="project-category">UI - Programmer</p>
+                <p class="project-category" id="poEscaladaPos">UI - Programmer</p>
 
               </a>
             </li>
@@ -898,7 +901,7 @@
         - #BLOG
       -->
 
-      <article class="blog" data-page="blog">
+      <!-- <article class="blog" data-page="blog">
 
         <header>
           <h2 class="h2 article-title">Blog</h2>
@@ -1083,7 +1086,7 @@
       </article>
 
 
-
+ -->
 
 
       <!--
