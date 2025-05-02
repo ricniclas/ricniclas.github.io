@@ -187,6 +187,10 @@
             <button class="navbar-link" data-nav-link>Portfolio</button>
           </li>
 
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Tech-Art</button>
+          </li>
+
 <!-- 
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Contact</button>
@@ -769,7 +773,7 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/StandAndFight.jpg" alt="Stand & Fight" loading="lazy">
+                  <img src="./assets/images/StandAndFight.png" alt="Stand & Fight" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">Stand & Fight</h3>
@@ -893,7 +897,125 @@
 
       </article>
 
+      <!--
+        - #TechArt
+      -->
 
+      <article class="tech-art" data-page="tech-art">
+
+        <header>
+          <h2 class="h2 article-title">Tech art</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Games</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Simulations</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Games</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Medical Simulations</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="games">
+              <a href="https://www.behance.net/gallery/224949127/Unity-Post-Processing-Shaders">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/PostProcessingThumbnail1_1.png" alt="PostProcessing" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Post Processing Shaders</h3>
+
+                <p class="project-category">Unity - Unreal</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="simulations">
+              <a href="https://www.behance.net/gallery/218519939/Shaders-for-medical-education">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/SimtheraShaders.png" alt="Medical Shaders" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Medical Shaders</h3>
+
+                <p class="project-category" id="poSimRaqPos">Unity</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="games">
+              <a href="https://www.behance.net/gallery/143468579/Unity-VFX-Graph">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/VFXGRAPH.png" alt="VFXGRAPH" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">VFX Graph</h3>
+
+                <p class="project-category" id="poStandPos">Unity</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
 
 
 
