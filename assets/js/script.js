@@ -145,16 +145,16 @@ const language_pt =
   "poEscaladaPos":"UI - Programador"
 }
 
-window.dataLayer = window.dataLayer || [];
+//window.dataLayer = window.dataLayer || [];
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  window.dataLayer.push({
-    event: 'domContentLoaded',
+  dataLayer.push({
+    CustomEvent: 'domContentLoaded',
     timestamp: new Date().toISOString()
   });
 
-console.log(window.dataLayer);
+console.log(dataLayer);
 });
 
 
