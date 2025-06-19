@@ -144,6 +144,20 @@ const language_pt =
   "poDataPos":"Artista Técnico - Animador - Compositor",
   "poEscaladaPos":"UI - Programador"
 }
+
+window.dataLayer = window.dataLayer || [];
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  window.dataLayer.push({
+    event: 'domContentLoaded',
+    timestamp: new Date().toISOString()
+  });
+
+console.log(window.dataLayer);
+});
+
+
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
