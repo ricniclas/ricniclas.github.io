@@ -144,7 +144,7 @@ const language_pt =
   "poDataPos":"Artista Técnico - Animador - Compositor",
   "poEscaladaPos":"UI - Programador"
 }
-let currentSelectedGlasses;
+var currentSelectedGlasses;
 
 //window.dataLayer = window.dataLayer || [];
 
@@ -162,9 +162,10 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener('keydown', function(event) {
   if (event.key === 'L' || event.key === 'l') {
 
-    let newId = 9999;
-    if(currentSelectedGlasses)
+    var newId = 9999;
+    if(currentSelectedGlasses){
       newId = currentSelectedGlasses;
+    }
 
     window.parent.postMessage({
       action: 'glassesChanged',
