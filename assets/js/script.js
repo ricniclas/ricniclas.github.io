@@ -144,6 +144,7 @@ const language_pt =
   "poDataPos":"Artista Técnico - Animador - Compositor",
   "poEscaladaPos":"UI - Programador"
 }
+let currentSelectedGlasses;
 
 //window.dataLayer = window.dataLayer || [];
 
@@ -153,16 +154,21 @@ document.addEventListener("DOMContentLoaded", () => {
     if (event.data.action === 'updateGlasses') {
       // Load the specified glasses in the try-on
       console.log("Selected glasses: ");
-      console.log(event.data.glassesId);
+      currentSelectedGlasses = event.data.glassesId;
     }
   });
 });
 
 document.addEventListener('keydown', function(event) {
   if (event.key === 'L' || event.key === 'l') {
+
+    let newId = 9999;
+    if(currentSelectedGlasses)
+      newId = currentSelectedGlasses;
+
     window.parent.postMessage({
       action: 'glassesChanged',
-      glassesId: 3
+      glassesId: newId
     }, 'http://127.0.0.1:5500');
   }
 });
