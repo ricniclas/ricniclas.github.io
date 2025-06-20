@@ -149,12 +149,22 @@ const language_pt =
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  dataLayer.push({
-    CustomEvent: 'domContentLoaded',
-    timestamp: new Date().toISOString()
+  window.addEventListener('message', function(event){
+    if (event.data.action === 'updateGlasses') {
+      // Load the specified glasses in the try-on
+      console.log("Selected glasses: ");
+      console.log(event.data.glassesId);
+    }
   });
+});
 
-console.log(dataLayer);
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'L' || event.key === 'l') {
+    window.parent.postMessage({
+      action: 'glassesChanged',
+      glassesId: 3
+    }, 'https://ricniclas.github.io');
+  }
 });
 
 
