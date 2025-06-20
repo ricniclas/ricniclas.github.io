@@ -163,7 +163,7 @@ document.addEventListener('keydown', function(event) {
     window.parent.postMessage({
       action: 'glassesChanged',
       glassesId: 3
-    }, 'https://ricniclas.github.io');
+    }, 'http://127.0.0.1:5500');
   }
 });
 
